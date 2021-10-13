@@ -1,0 +1,108 @@
+$color-primary: #16abf8;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: #111111;
+}
+.page-container {
+  width: 100%;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  position: relative;
+}
+.header {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $color-primary;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.brand-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+.sub-header {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-page {
+  font-size: 36px;
+  color: #111111;
+  margin: 0;
+  font-weight: 700;
+}
+.btn-big {
+  height: 50px;
+  min-width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.btn-cyan {
+  background-color: $color-primary;
+  color: #ffffff;
+  border-color: $color-primary;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-primary;
+    color: #ffffff;
+    border-color: $color-primary;
+    opacity: 0.8;
+  }
+  &.btn-loading {
+    background-color: $color-primary;
+    color: #ffffff;
+    border-color: $color-primary;
+    opacity: 0.6;
+    cursor: not-allowed !important;
+  }
+}
+.btn-rounded {
+  border-radius: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.btn-icon {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border-color: transparent;
+  color: #111111;
+  font-size: 18px;
+  &.back {
+    color: #111111;
+    padding: 0;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.empty-state {
+  padding: 15px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
