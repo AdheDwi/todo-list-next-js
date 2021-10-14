@@ -89,7 +89,6 @@ body {
   background-color: transparent;
   border-color: transparent;
   color: #111111;
-  font-size: 18px;
   &.back {
     color: #111111;
     padding: 0;
@@ -98,6 +97,24 @@ body {
     align-items: center;
     justify-content: center;
   }
+  &.sorted {
+    transform: rotate(90deg);
+    border: 1px solid #a4a4a4 !important;
+    border-radius: 25px !important;
+    margin-right: 20px;
+    height: 50px;
+    width: 50px;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #eaeaea;
+      opacity: 0.9;
+    }
+  }
 }
 .empty-state {
   padding: 15px 0;
@@ -105,4 +122,78 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.todo-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sub-header-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.sort-dropdown {
+  position: relative;
+}
+.sort-menu {
+  width: 250px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 10px;
+  top: 70px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.sort-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f4f4f4;
+  cursor: pointer;
+  .sort-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.rotate {
+      transform: rotate(90deg);
+    }
+  }
+  .sort-name {
+    margin-left: 15px;
+    width: calc(100% - 63px);
+  }
+  .sort-check {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover {
+    background-color: #f4f4f4;
+  }
+  &:last-child {
+    border-bottom: unset;
+  }
+}
+.input-todo-title {
+  font-size: 36px;
+  color: #111111;
+  margin: 0;
+  font-weight: 700;
+  width: fit-content;
+  background-color: transparent;
+  border-color: #a4a4a4;
+  border-top: unset;
+  border-left: unset;
+  border-right: unset;
+  &:focus-visible {
+    outline: unset;
+  }
 }
